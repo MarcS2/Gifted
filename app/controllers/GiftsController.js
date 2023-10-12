@@ -64,7 +64,7 @@ export class GiftsController {
       const form = event.target
       const giftFormData = getFormData(form)
       await giftsService.createGift(giftFormData)
-
+      form.reset()
     } catch (error) {
       Pop.error(error)
       console.error(error)
